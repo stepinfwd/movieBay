@@ -1,0 +1,30 @@
+nav{
+    background-color: #17151B;
+     height: 100px !important;
+}
+.navbar-brand{
+    color: #fff;
+    font-weight: 700;
+    padding-top: 1rem;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+}
+.search-button{
+    color: #fff;
+    border-color: #fff;
+    font-weight: 800;
+
+}
+.search-button:hover{
+   background-color: rgb(10, 141, 123);
+   /* border-color: 3px solid rgb(89, 75, 185) !important; */
+
+}
+.logo-style{
+    margin-right: 10px;
+}
+.navbar-brand span{
+    font-weight: 900 !important;
+    font-size: 2rem;
+    color: rgb(2, 143, 124);
+}
