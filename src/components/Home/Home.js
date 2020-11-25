@@ -1,12 +1,11 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import CardList from "../CardList/CardList";
-function Home({data}) {
-  
+function Home({ data, search }) {
   return (
     <div>
-      <Navbar />
-      <CardList data={data}/>
+      <Navbar search={search} />
+      <CardList data={data} />
     </div>
   );
 }

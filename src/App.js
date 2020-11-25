@@ -6,13 +6,15 @@ import Home from "./components/Home/Home";
 
 function App() {
   const [data, setData] = useState("");
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
     axios.get("http://api.tvmaze.com/shows").then((res) => setData(res.data));
   }, []);
 
   return (
     <div className="App">
-      <Home data={data} />
+      <Home data={data} search={search} />
     </div>
   );
 }

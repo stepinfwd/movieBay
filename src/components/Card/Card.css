@@ -76,12 +76,15 @@ h5 {
     color: rgba(0, 0, 0, .87);
 }
 .like-img {
-    width: 25px !important;
+    width: 33px !important;
     margin-right: 20px !important;
 }
 .like-img:hover {
-    width: 30px !important;
+    width: 35px !important;
 }
 .card-img-top:hover{
 opacity: 0.8 !important;
+}
+.card-footer-like {
+    color: rgb(255, 0, 119) !important;
 }

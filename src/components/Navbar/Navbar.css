@@ -22,9 +22,11 @@ nav{
 }
 .logo-style{
     margin-right: 10px;
+    margin-top: -10px;
+
 }
 .navbar-brand span{
     font-weight: 900 !important;
     font-size: 2rem;
-    color: rgb(2, 143, 124);
+    color: #ff0077 !important;
 }

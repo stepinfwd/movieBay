@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import "./Navbar.css";
 function Navbar(props) {
+  const [input, setInput] = useState("");
+  const searchHandler = (e) => {
+    setInput(e.target.value);
+    console.log(input);
+  };
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log("search DataTransferItem", input);
+  };
   return (
     <div>
       <div>
@@ -16,10 +25,13 @@ function Navbar(props) {
               type="search"
               placeholder="Search"
               aria-label="Search"
+              onChange={searchHandler}
+              value={input}
             />
             <button
               className="btn s my-2 my-sm-0 search-button"
               style={{ color: "#fff", borderColor: "#fff", fontWeight: "800" }}
+              onClick={handleSearch}
             >
               Search
             </button>
