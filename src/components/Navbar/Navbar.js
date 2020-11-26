@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import "./Navbar.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function Navbar(props) {
   const [input, setInput] = useState("");
   const searchHandler = (e) => {
@@ -36,6 +37,7 @@ function Navbar(props) {
               Search
             </button>
           </form>
+        
         </nav>
       </div>
     </div>

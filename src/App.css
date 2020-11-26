@@ -1,6 +1,18 @@
 .App {
   text-align: center;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html,
+body {
+  margin: 0;
+  background: white;
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
 
 .App-logo {
   height: 40vmin;

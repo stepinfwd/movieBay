@@ -13,14 +13,14 @@ function Card(props) {
         <div className="card-block">
           <h4 className="card-title">{props.item.name}</h4>
           <div className="meta">
-            <a href="#">{item.premiered}</a>
+            <a>{item.premiered}</a>
           </div>
           <div className="card-text">genres</div>
         </div>
         <div className="card-footer">
           <span>
             <i >
-              <img className="like-img" src={like}></img>
+              <img className="like-img" alt="" src={like}></img>
             </i>
             <span className="card-footer-like">  {item.weight}Likes</span>
           </span>

@@ -1,11 +1,11 @@
 nav{
-    background-color: #17151B;
-     height: 100px !important;
+    background-color: #2200df;
+     height: 70px !important;
+     line-height: 0 !important;
 }
 .navbar-brand{
     color: #fff;
     font-weight: 700;
-    padding-top: 1rem;
     font-size: 2rem;
     letter-spacing: .1rem;
 }
@@ -14,6 +14,9 @@ nav{
     border-color: #fff;
     font-weight: 800;
 
+}
+.navbar li{
+    color: #ff0077;
 }
 .search-button:hover{
    background-color: rgb(10, 141, 123);
