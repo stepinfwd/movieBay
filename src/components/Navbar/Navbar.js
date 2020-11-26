@@ -17,8 +17,8 @@ function Navbar(props) {
       <div>
         <nav className="navbar  justify-content-between">
           <p className="navbar-brand">
-            <img className="logo-style" src={logo} alt="" />
-            <span>TV</span>maze{" "}
+            {/* <img className="logo-style" src={logo} alt="" /> */}
+            <span></span>NETFLIX{" "}
           </p>
           <form className="form-inline">
             <input

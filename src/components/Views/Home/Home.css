@@ -1,0 +1,15 @@
+.home_main_heading {
+  font-weight: 900;
+  color: #fff;
+}
+.home_sec_heading {
+  font-weight: 900;
+  color: #f91a2c !important;
+}
+.home {
+  background: rgb(7, 7, 7);
+  padding-top: 30px;
+}
+.home_heading {
+  color: #fff;
+}
