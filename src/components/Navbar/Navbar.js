@@ -22,7 +22,7 @@ function Navbar(props) {
           </p>
           <form className="form-inline">
             <input
-              className="form-control mr-sm-2"
+              className="form-control mr-sm-2 input-box"
               type="search"
               placeholder="Search"
               aria-label="Search"
@@ -31,7 +31,6 @@ function Navbar(props) {
             />
             <button
               className="btn s my-2 my-sm-0 search-button"
-              style={{ color: "#fff", borderColor: "#fff", fontWeight: "800" }}
               onClick={handleSearch}
             >
               Search

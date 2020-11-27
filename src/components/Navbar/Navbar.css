@@ -10,17 +10,9 @@ nav{
     letter-spacing: .1rem;
 }
 .search-button{
-    color: #fff;
-    border-color: #fff;
+    color: #fff !important;
+    border-color: #fff !important;
     font-weight: 800;
-
-}
-.navbar li{
-    color: #ff0077;
-}
-.search-button:hover{
-   background-color: rgb(10, 141, 123);
-   /* border-color: 3px solid rgb(89, 75, 185) !important; */
 
 }
 .logo-style{
@@ -31,5 +23,7 @@ nav{
 .navbar-brand span{
     font-weight: 900 !important;
     font-size: 2rem;
-    color: #ff0077 !important;
 }
+/* .input-box{
+    width: 13.5vw !important;
+} */

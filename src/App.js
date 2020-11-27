@@ -5,6 +5,8 @@ import Home from "./components/Views/Home/Home";
 import MovieInfo from "./components/Views/Movie-info/MovieInfo";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import CastInfo from "./components/castinfo/CastInfo";
+import Footer from "./components/footer/Footer";
 
 function App() {
  return (
@@ -15,11 +17,12 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/shows/:id">
+          <Route exact path="/shows/:id">
             <MovieInfo />
           </Route>
-         
         </Switch>
+        {/* <Footer/> */}
+
       </Router>
     </div>
   );

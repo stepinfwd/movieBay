@@ -7,8 +7,9 @@
   color: #f91a2c !important;
 }
 .home {
-  background: rgb(7, 7, 7);
+  background: #070707;
   padding-top: 30px;
+  min-height: 100vh;
 }
 .home_heading {
   color: #fff;

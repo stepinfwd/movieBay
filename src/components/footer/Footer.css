@@ -1,0 +1,7 @@
+.footer{
+    height: 60px;
+    background-color: #101010;
+}
+.footer a ,.footer-copyright{
+    color: #fff;
+}

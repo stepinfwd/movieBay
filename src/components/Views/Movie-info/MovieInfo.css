@@ -1,39 +1,46 @@
-.movie_info_sidenote{
-    background: #e5e6e6;
-    height: 300px;
-    width:  370px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    color: #6e7076;
-    border-radius: 10px;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
-    text-align: left;
-    
+.movie_info_sidenote {
+  background: #e5e6e6;
+  height: 300px;
+  width: 370px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #6e7076;
+  border-radius: 10px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
+  text-align: left;
 }
-    
-.movie_info_sidenote p{ 
-    font-size: 12px;
-    color: #6e7076;
-    font-weight: 700;
-    border-bottom: 1px solid rgba(3, 2, 3, 0.61);
-    padding: 0.5rem;
-    padding-left: 2rem;
-}
-.movie_info_global{
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    background: #070707;
-}
-.movie_info_main_header{
-    padding-top: 30px;
-    color: #fff;
-    font-weight: 900;
 
+.movie_info_sidenote p {
+  font-size: 12px;
+  color: #6e7076;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(3, 2, 3, 0.61);
+  padding: 0.5rem;
+  padding-left: 2rem;
 }
-.movie_info_main_header_span{
-    color: #f91a2c !important;
-
+.movie_info_global {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  background: #070707;
+}
+.movie_info_main_header {
+  padding-top: 30px;
+  color: #fff;
+  font-weight: 900;
+}
+.movie_info_main_header_span {
+  color: #f91a2c !important;
+}
+.episode_main_heading span {
+  color: #f91a2c !important;
+}
+.episode_main_heading {
+  font-size:42px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  /* font-weight: 800; */
+  color: #fff;
 }

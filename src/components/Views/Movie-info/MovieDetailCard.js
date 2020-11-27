@@ -10,11 +10,11 @@ function MovieDetailCard({ movieitem }) {
           <div className="info_section">
             <div className="movie_header">
               <img
-                className="locandina"
+                className="movie_header_image"
                 style={{ backgroundImage: `url(${movieitem.image.medium})` }}
               />
               <h1>{movieitem.name}</h1>
-              <h4>{movieitem.premiered}</h4>
+              {/* <h4>{movieitem.premiered}</h4> */}
               <span className="minutes">{movieitem.runtime} min</span>
               <p className="type">
                 {movieitem.genres[0]}, {movieitem.genres[1]},{" "}
