@@ -20,13 +20,13 @@ function Navbar(props) {
             {/* <img className="logo-style" src={logo} alt="" /> */}
             NETFLIX
           </p></Link> 
-         <Link to="/">HOME</Link>
-         <Link to="/people">people</Link>
+         {/* <Link to="/">HOME</Link>
+         <Link to="/people">people</Link> */}
           <form className="form-inline">
             <input
               className="form-control mr-sm-2 input-box"
               type="search"
-              placeholder="Search"
+              placeholder="Search" 
               aria-label="Search"
               onChange={searchHandler}
               value={input}

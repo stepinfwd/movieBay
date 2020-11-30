@@ -16,13 +16,24 @@ function MovieInfo({ data }) {
   const episode_url = `http://api.tvmaze.com/shows/${id}/episodes`;
   const crew_url = `http://api.tvmaze.com/shows/${id}/crew`;
   const gallery_url = `http://api.tvmaze.com/shows/${id}/images`;
+  const search_url = `http://api.tvmaze.com/shows/`;
+
+// : http://api.tvmaze.com/search/shows?q=girls
+//`https://api.unsplash.com/search/photos/?client_id=LD3Wl2QrQPHFCUnAGXU6AWQdLSipmIgi8TZKjzOOxAI&query=${search}`
 
   const [movieitem, setMovieitem] = useState();
   const [cast, setCast] = useState();
   const [episode, setEpisode] = useState();
   const [crew, setCrew] = useState();
   const [gallery, setGallery] = useState();
+  const [search, setSearch] = useState();
 
+// SINGLE__SHOW
+  useEffect(() => {
+    axios.get(search_url).then((res) => {
+      setSearch(res.data);
+    });
+  }, [search_url]);
   // SHOW
   useEffect(() => {
     axios.get(url).then((res) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Person.css";
 
-function Person() {
+function Person({person}) {
   return (
     <>
       <p className="castInfo_global_header personInfo_global">
@@ -9,25 +9,29 @@ function Person() {
       </p>{" "}
       <div>
         <input />
-        {/* {person
-            ? person.map(( p ) => (
-           
-                <div className="cast-global col-lg-4 " key={p.id}>
-                  <div className="cast-card">
-                    <div className="cast-card__header-image">
-                      <img className="cast-card__avatar" 
-                       style={{
-                        backgroundImage: `url(${p.image.medium})`
-
-                      }} alt="no image yet"/>
-                    </div>
-                    <p className="cast-card__name">{p.name}</p>
-                    <p className="cast-card__name_linker">AS</p>
-                    <p className="cast-card__moviename"></p>
+        {person
+          ? person.map((p) => (
+              <div className="person_card">
+                <img
+                  className="cast-card__avatar"
+                  style={{
+                    backgroundImage: `url(${p.image.medium})`,
+                  }}
+                />
+                <div class="column">
+                  <div className="container">
+                    <h2>Jane Doe</h2>
+                    <p className="title">CEO Founder</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>example@example.com</p>
+                    <p>
+                      <button class="button">Contact</button>
+                    </p>
                   </div>
                 </div>
-              ))
-            : "load"} */}
+              </div>
+            ))
+          : "load"}
       </div>
     </>
   );
