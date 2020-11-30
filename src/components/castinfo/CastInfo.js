@@ -3,7 +3,7 @@ import "./CastInfo.css";
 import axios from "axios";
 
 function CastInfo({ cast }) {
-  console.log("CAST IS", cast);
+  // console.log("CAST IS", cast);
   return (
     <div className="castInfo_global container">
       <p className="castInfo_global_header">
@@ -11,15 +11,21 @@ function CastInfo({ cast }) {
       </p>
       <div className="row">
         {cast
-          ? cast.map((person) => (
-              <div className="cast-global col-lg-4 ">
+          ? cast.map(({ person, character }) => (
+              //  console.log("RAS",person.character)
+              <div className="cast-global col-lg-4 " key={person.id}>
                 <div className="cast-card">
                   <div className="cast-card__header-image">
-                    <div className="cast-card__avatar" />
+                    <div
+                      className="cast-card__avatar"
+                      style={{
+                        backgroundImage: `url(${person.image.original})`,
+                      }}
+                    />
                   </div>
                   <p className="cast-card__name">{person.name}</p>
                   <p className="cast-card__name_linker">AS</p>
-                  <p className="cast-card__moviename">Jason Bourne</p>
+                  <p className="cast-card__moviename">{character.name}</p>
                 </div>
               </div>
             ))

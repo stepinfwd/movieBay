@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../../Navbar/Navbar";
 import "./Home.css";
 import CardList from "../../CardList/CardList";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";

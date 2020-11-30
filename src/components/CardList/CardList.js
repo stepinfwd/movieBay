@@ -10,7 +10,7 @@ function CardList({ data }) {
       <div className="row">
         {data
           ? data.map((item) => (
-              <div className="col-sm-6 col-md-4 col-lg-3">
+              <div className="col-sm-6 col-md-4 col-lg-3" key={item.id}>
                 <Card item={item} key={item.id} />
               </div>
             ))

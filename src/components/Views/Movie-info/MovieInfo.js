@@ -63,17 +63,16 @@ function MovieInfo({ data }) {
       {/* <h3 className="movie_info_main_header">
         SHOW <span className="movie_info_main_header_span">INFO</span>
       </h3> */}
-      {/* <InnerNav/>
-      <MovieDetailCard movieitem={movieitem} /> */}
-      <h3 className="movie_info_main_header">
+       <InnerNav gallery={gallery}  episode={episode} cast={cast} movieitem={movieitem} crew={crew}/>
+     {/* <MovieDetailCard movieitem={movieitem} /> */}
+      {/* <h3 className="movie_info_main_header">
         Image
         <span className="movie_info_main_header_span">
           <span>I</span>nfo
         </span>
       </h3>{" "}
-      <Gallery gallery={gallery} />
-      <Crew crew={crew}/>
-      {/* <CastInfo  cast={cast}/>
+      <Gallery gallery={gallery} /> */}
+?      {/* <CastInfo  cast={cast}/>
       <h3 className="episode_main_heading">Episode<span>List</span></h3>
 
       <Episode episode={episode}/> */}

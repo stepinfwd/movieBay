@@ -1,53 +1,93 @@
 import React from "react";
+import "./InnerNav.css";
 import Crew from "../Crew/Crew";
 import Gallery from "../Gallery/Gallery";
 import Episode from "../Episode/Episode";
+import MovieDetailCard from "../Views/Movie-info/MovieDetailCard";
+
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useParams,
-    useRouteMatch,
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch,
 } from "react-router-dom";
-import Topic from "../Topic/Topic";
+import CastInfo from "../castinfo/CastInfo";
+import Person from "../person/Person";
 function InnerNav(props) {
-    let { path, url } = useRouteMatch();
+  let { path, url } = useRouteMatch();
+  const { id } = useParams();
+  const { gallery, crew, episode, movieitem, cast } = props;
+  return (
+    <>
+      <Router>
+        <div className="inner_nav">
+          <ul className="breadcrumb">
+            <li>
+              <Link to={`${url}/`}>Details</Link>
+            </li>
+            <span>/</span>
+            <li>
+              <Link to={`${url}/cast`}>Cast</Link>
+            </li>
+            <span>/</span>
 
-    return (
-        <>
-            <Router>
-                <div className="inner_nav">
-                    <ul className="breadcrumb">
-                        <li>
-                            <a>
-                                <Link to={`${url}/crew`}>Crew</Link>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <Link to={`${url}/gallery`}>Gallery</Link>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <Link to={`${url}/episode`}>Episode</Link>
-                            </a>
-                        </li>
-                    </ul>
+            <li>
+              <Link to={`${url}/crew`}>Crew</Link>
+            </li>
+            <span>/</span>
+            <li>
+              <Link to={`${url}/gallery`}>Gallery</Link>
+            </li>
+            <span>/</span>
 
-                    <Switch>
-                        <Route exact path={path}>
-                            <h3>testing</h3>
-                        </Route>
-                        <Route path={`${path}/:topicId`}>
-                            <Topic />
-                        </Route>
-                    </Switch>
-                </div>
-            </Router>
-        </>
-    );
+            <li>
+              <Link to={`${url}/episode`}>Episode</Link>
+            </li>
+          </ul>
+          {/* <Switch>
+            {routes.map((route, index) => (
+              <Route
+                path={route.path}
+                key={index}
+                exact
+                render={(props) => <route.component {...props} />}
+              ></Route>
+            ))}
+          </Switch> */}
+          <Switch>
+            <Route
+              exact
+              path={`${url}/`}
+              render={() => <MovieDetailCard movieitem={movieitem} />}
+            />
+            <Route
+              exact
+              path={`${url}/episode`}
+              render={() => <Episode episode={episode} />}
+            />
+            <Route
+              exact
+              path={`${url}/crew`}
+              render={() => <Crew crew={crew} />}
+            />
+            <Route
+              exact
+              path={`${url}/gallery`}
+              render={() => <Gallery gallery={gallery} />}
+            />
+
+            <Route
+              exact
+              path={`${url}/cast`}
+              render={() => <CastInfo cast={cast} />}
+            />
+          </Switch>
+        </div>
+      </Router>
+    </>
+  );
 }
 
 export default InnerNav;

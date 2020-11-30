@@ -1,4 +1,16 @@
-.inner_nav ul li{
-color: #fff !important;
-padding: 1rem;
+.inner_nav ul li a {
+  color: #fff !important;
+  padding: 1rem;
+  font-weight: 600;
+}
+.breadcrumb {
+  background-color: #ffffff00 !important;
+}
+.inner_nav {
+  padding-top: 20px;
+}
+span {
+  color: #c50000;
+  font-weight: 900;
+  display: inline-block;
 }

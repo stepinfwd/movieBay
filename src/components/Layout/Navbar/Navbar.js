@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import "./Navbar.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function Navbar(props) {
@@ -16,10 +16,12 @@ function Navbar(props) {
     <div>
       <div>
         <nav className="navbar  justify-content-between">
-          <p className="navbar-brand">
+        <Link to="/">  <p className="navbar-brand">
             {/* <img className="logo-style" src={logo} alt="" /> */}
-            <span></span>NETFLIX{" "}
-          </p>
+            NETFLIX
+          </p></Link> 
+         <Link to="/">HOME</Link>
+         <Link to="/people">people</Link>
           <form className="form-inline">
             <input
               className="form-control mr-sm-2 input-box"
@@ -36,6 +38,8 @@ function Navbar(props) {
               Search
             </button>
           </form>
+
+
         
         </nav>
       </div>

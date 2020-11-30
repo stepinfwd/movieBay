@@ -1,47 +1,44 @@
 tr:nth-child(n) {
-    /* background: #282C34; */
-    /* background: #fdeae9; */
-        background: #FFEEDD;
-
-
-  }
-  /* tr:nth-child(even) {
+  /* background: #282C34; */
+  /* background: #fdeae9; */
+  /* background: #FFEEDD; */
+  background-color: #7d7d7d;
+}
+/* tr:nth-child(even) {
     background: #212429;
   } */
-td,th{
-    color: #424242;
+td,
+th {
+  /* color: #424242; */
+  color: #000000;
 }
-.episode_table{
-    width: 76vw;
-    margin: 30px auto;
-    box-shadow: 5px 18px 120px 12px rgba(155, 155, 155, 0.34);
-    
-    
-
+.episode_table {
+  width: 76vw;
+  margin: 30px auto;
+  box-shadow: 5px 18px 120px 12px rgba(155, 155, 155, 0.34);
 }
-h3.episode_table span{
-    color: "#f91a2c" !important;
+.movie_table_name {
+  color: #ffeedd;
 }
-td{
-    text-align: left;
-
+h3.episode_table span {
+  color: "#f91a2c" !important;
+}
+td {
+  text-align: left;
 }
 
-.table thead th{
-    border-bottom: none !important;
-
+.table thead th {
+  border-bottom: none !important;
 }
-.table thead th:first-child{
-    border-top-left-radius: 12px;
-
-
+.table thead th:first-child {
+  border-top-left-radius: 12px;
 }
-.table td, .table th{
-    border-bottom: 1px solid #212529;
-
+.table td,
+.table th {
+  border-bottom: 1px solid #212529;
 }
-thead{
-    text-align: left;
+thead {
+  text-align: left;
 }
 /* .table td, .table th:first-child {
     border-bottom: none !important;
@@ -49,10 +46,8 @@ thead{
 } */
 
 .table th {
-   
-    border-top: 1px solid #212529 !important;
+  border-top: 1px solid #212529 !important;
 }
-#table_top_right{
-    border-top-right-radius: 12px;
-
+#table_top_right {
+  border-top-right-radius: 12px;
 }
