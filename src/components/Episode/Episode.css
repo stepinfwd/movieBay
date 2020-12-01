@@ -13,7 +13,6 @@ th {
   color: #000000;
 }
 .episode_table {
-  width: 76vw;
   margin: 30px auto;
   box-shadow: 5px 18px 120px 12px rgba(155, 155, 155, 0.34);
 }
@@ -50,4 +49,11 @@ thead {
 }
 #table_top_right {
   border-top-right-radius: 12px;
+}
+@media only screen and (min-width: 1200px) {
+
+  .episode_table {
+    width: 76vw;
+}
+
 }

@@ -13,7 +13,7 @@ function Card(props) {
         />
         <div className="card-block">
           <h4 className="card-title">{props.item.name}</h4>
-          <div className="meta">
+          <div className="card-premier">
             <a>{item.premiered}</a>
           </div>
           <div className="card-text">

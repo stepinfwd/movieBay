@@ -4,7 +4,10 @@ h5 {
   line-height: 1.2857em;
   margin: 0;
 }
-
+.card-premier {
+  color: #636c73;
+  font-weight: 600;
+}
 .card {
   font-size: 1em;
   overflow: hidden;
@@ -92,8 +95,10 @@ h5 {
   color: #2b36c7 !important;
   font-weight: 900;
 }
-.card-footer-rating{
-    padding-top: 5px;
+.card-footer-rating {
+  padding-top: 5px;
+  color: #2b36c7 !important;
+
 }
 .card-text button {
   margin: 10px !important;
@@ -106,7 +111,6 @@ h5 {
 .more-button-container {
   margin: 0 auto;
   margin-bottom: 10px;
-
 }
 .btn:hover {
   background-color: #2b36c7 !important;

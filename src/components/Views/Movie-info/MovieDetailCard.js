@@ -18,7 +18,7 @@ function MovieDetailCard({ movieitem }) {
               {/* <h4>{movieitem.premiered}</h4> */}
               <span className="minutes">{movieitem.runtime} min</span>
               <p className="type">
-                {movieitem.genres[0]}, {movieitem.genres[1]},{" "}
+                {movieitem.genres[0]}, {movieitem.genres[1]},
                 {movieitem.genres[2]}
               </p>
             </div>
