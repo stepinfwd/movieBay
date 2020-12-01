@@ -6,3 +6,9 @@
     padding: 1.5rem;
     grid-auto-rows: minmax(20vw, auto);
   } */
+  .loader-container{
+    display: block !important;
+  }
+  .image-grid .row{
+    justify-content: center !important;
+  }

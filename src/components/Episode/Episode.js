@@ -1,5 +1,6 @@
 import React from "react";
 import "./Episode.css";
+import Loader from "../common/Loader/Loader";
 
 function Episode({ episode }) {
   console.log("episode is", episode);
@@ -25,19 +26,16 @@ function Episode({ episode }) {
               ? episode.map((episode) => (
                   <>
                     {/* <h3 className="movie_table_name">{episode.name}</h3> */}
-
-                    <tr key={episode.id}>
+<tr key={episode.id}>
                       <td>{episode.name}</td>
                       <td>{episode.season}</td>
                       <td>{episode.runtime}</td>
                       <td>{episode.airdate}</td>
                       <td>love</td>
-
-                      {/* <td><button type="button" className="btn btn-danger" onClick={()=>this.handleDelete(movie)}>Danger</button></td> */}
                     </tr>
                   </>
                 ))
-              : "NULL"}
+              : <Loader/>}
           </tbody>
         </table>{" "}
       </div>

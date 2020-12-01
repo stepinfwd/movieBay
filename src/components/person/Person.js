@@ -1,5 +1,6 @@
 import React from "react";
 import "./Person.css";
+import Loader from "../common/Loader/Loader";
 
 function Person({person}) {
   return (
@@ -31,7 +32,7 @@ function Person({person}) {
                 </div>
               </div>
             ))
-          : "load"}
+          : <Loader/>}
       </div>
     </>
   );

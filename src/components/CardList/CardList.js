@@ -1,12 +1,18 @@
-import React, { useEffect } from "react";
+
+
+import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import "./CardList.css";
+import Loader from "../common/Loader/Loader";
 function CardList({ data,value }) {
   useEffect(() => {
     console.log("Data", data);
   }, []);
-  console.log("Dataaaa", data);
-  console.log("VAUEEE", value);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage, setPostPerPage] = useState(15);
+  const indexOfLastPost = currentPage * postPerPage;
+  const indexOfFirstPost = indexOfLastPost - postPerPage;
+  const currentPost = data.slice(indexOfFirstPost, indexOfLastPost);
 
   const items =
   data?data.filter((data)=>{
@@ -25,10 +31,11 @@ function CardList({ data,value }) {
                 <Card item={item} key={item.id} />
               </div>
             ))
-          : "LOAD"}
+          : <Loader/>}
       </div>
     </div>
   );
 }
 
 export default CardList;
+

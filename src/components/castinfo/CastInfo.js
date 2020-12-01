@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./CastInfo.css";
 import axios from "axios";
+import Loader from "../common/Loader/Loader";
 
-function CastInfo({ cast }) {
-  // console.log("CAST IS", cast);
+function CastInfo({ cast,value }) {
   return (
     <div className="castInfo_global container">
       <p className="castInfo_global_header">
@@ -29,7 +29,7 @@ function CastInfo({ cast }) {
                 </div>
               </div>
             ))
-          : "load"}
+          : <Loader/>}
       </div>
     </div>
   );

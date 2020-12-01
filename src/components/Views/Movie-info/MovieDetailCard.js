@@ -1,5 +1,6 @@
 import React from "react";
 import "./MovieDetailCard.css";
+import Loader from "../../common/Loader/Loader";
 
 function MovieDetailCard({ movieitem }) {
   return (
@@ -31,7 +32,7 @@ function MovieDetailCard({ movieitem }) {
           ></div>
           </>
         ) : (
-          "null"
+          <Loader/>
         )}
       
       </div>
@@ -40,18 +41,3 @@ function MovieDetailCard({ movieitem }) {
 }
 
 export default MovieDetailCard;
-{
-  /* <div className="movie_social">
-            <ul>
-              <li>
-                <i className="material-icons">share</i>
-              </li>
-              <li>
-                <i className="material-icons"></i>
-              </li>
-              <li>
-                <i className="material-icons">chat_bubble</i>
-              </li>
-            </ul>
-          </div> */
-}

@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./MovieInfo.css";
-import MovieDetailCard from "./MovieDetailCard";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import CastInfo from "../../castinfo/CastInfo";
 import InnerNav from "../../Innernavbar/InnerNav";
-import Episode from "../../Episode/Episode";
-import Gallery from "../../Gallery/Gallery";
-import Crew from "../../Crew/Crew";
 
-function MovieInfo({ data }) {
+function MovieInfo({ data ,value}) {
   let { id } = useParams();
   const url = `http://api.tvmaze.com/shows/${id}`;
   const cast_url = `http://api.tvmaze.com/shows/${id}/cast`;
@@ -17,9 +12,6 @@ function MovieInfo({ data }) {
   const crew_url = `http://api.tvmaze.com/shows/${id}/crew`;
   const gallery_url = `http://api.tvmaze.com/shows/${id}/images`;
   const search_url = `http://api.tvmaze.com/shows/`;
-
-// : http://api.tvmaze.com/search/shows?q=girls
-//`https://api.unsplash.com/search/photos/?client_id=LD3Wl2QrQPHFCUnAGXU6AWQdLSipmIgi8TZKjzOOxAI&query=${search}`
 
   const [movieitem, setMovieitem] = useState();
   const [cast, setCast] = useState();
@@ -34,6 +26,7 @@ function MovieInfo({ data }) {
       setSearch(res.data);
     });
   }, [search_url]);
+  
   // SHOW
   useEffect(() => {
     axios.get(url).then((res) => {
@@ -71,22 +64,7 @@ function MovieInfo({ data }) {
 
   return (
     <div className="movie_info_global">
-      {/* <h3 className="movie_info_main_header">
-        SHOW <span className="movie_info_main_header_span">INFO</span>
-      </h3> */}
-       <InnerNav gallery={gallery}  episode={episode} cast={cast} movieitem={movieitem} crew={crew}/>
-     {/* <MovieDetailCard movieitem={movieitem} /> */}
-      {/* <h3 className="movie_info_main_header">
-        Image
-        <span className="movie_info_main_header_span">
-          <span>I</span>nfo
-        </span>
-      </h3>{" "}
-      <Gallery gallery={gallery} /> */}
-?      {/* <CastInfo  cast={cast}/>
-      <h3 className="episode_main_heading">Episode<span>List</span></h3>
-
-      <Episode episode={episode}/> */}
+       <InnerNav gallery={gallery}  episode={episode} cast={cast} movieitem={movieitem} crew={crew} value={value}/>    
     </div>
   );
 }

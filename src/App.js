@@ -9,27 +9,22 @@ import Person from "./components/person/Person";
 function App() {
   const [input, searchInput] = useState();
   // to get search value from navbar
-  const searchCallback=(value)=>{
-    searchInput(value)
-    // console.log("VALUE",value)
-    // console.log("INPUT",input)
-
-  }
-  // console.log("INPU2T",input)
-
+  const searchCallback = (value) => {
+    searchInput(value);
+  };
   return (
     <div className="App">
       <Router>
-        <Navbar searchCallback={searchCallback} />
+        <Navbar searchCallback={searchCallback}/>
         <Switch>
           <Route exact path="/">
-            <Home value={input}/>
+            <Home value={input} />
           </Route>
           <Route exact path="/people">
             <Person />
           </Route>
           <Route exact path="/shows/:id">
-            <MovieInfo />
+            <MovieInfo value={input} />
           </Route>
         </Switch>
         {/* <Footer/> */}

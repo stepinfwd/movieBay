@@ -14,11 +14,10 @@ import {
   useRouteMatch,
 } from "react-router-dom";
 import CastInfo from "../castinfo/CastInfo";
-import Person from "../person/Person";
 function InnerNav(props) {
   let { path, url } = useRouteMatch();
   const { id } = useParams();
-  const { gallery, crew, episode, movieitem, cast } = props;
+  const { gallery, crew, episode, movieitem, cast,value } = props;
   return (
     <>
       <Router>
@@ -46,6 +45,7 @@ function InnerNav(props) {
               <Link to={`${url}/episode`}>Episode</Link>
             </li>
           </ul>
+          {/* CHECK WHY NOT WORKING */}
           {/* <Switch>
             {routes.map((route, index) => (
               <Route
@@ -81,7 +81,7 @@ function InnerNav(props) {
             <Route
               exact
               path={`${url}/cast`}
-              render={() => <CastInfo cast={cast} />}
+              render={() => <CastInfo cast={cast} value={value} />}
             />
           </Switch>
         </div>
