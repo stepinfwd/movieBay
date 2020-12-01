@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-function Home() {
+function Home({value}) {
   let content = null;
   const { id } = useParams();
   const url = "http://api.tvmaze.com/shows";
@@ -14,6 +14,7 @@ function Home() {
   useEffect(() => {
     axios.get(url).then((res) => setData(res.data));
   }, []);
+  console.log("VALUEEE HOMW",value)
   return (
     <div className="home">
       {/* <Navbar search={search} /> */}
@@ -21,7 +22,7 @@ function Home() {
         <span className="home_main_heading">NOW</span> SHOWING
       </h3>
       <h4 className="home_sec_heading">Featured</h4>
-      <CardList data={data} />
+      <CardList data={data} value={value} />
     </div>
   );
 }

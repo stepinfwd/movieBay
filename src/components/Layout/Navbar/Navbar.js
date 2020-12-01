@@ -2,22 +2,24 @@ import React, { useState, useEffect } from "react";
 import logo from "../../assets/logo.png";
 import "./Navbar.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-function Navbar(props) {
+function Navbar({searchCallback}) {
   const [input, setInput] = useState("");
   const searchHandler = (e) => {
     setInput(e.target.value);
-    console.log(input);
+    // console.log(input);
+    searchCallback(input);
   };
   const handleSearch = (e) => {
     e.preventDefault();
     console.log("search DataTransferItem", input);
+    searchCallback(input);
+    setInput("")
   };
   return (
     <div>
       <div>
         <nav className="navbar  justify-content-between">
         <Link to="/">  <p className="navbar-brand">
-            {/* <img className="logo-style" src={logo} alt="" /> */}
             NETFLIX
           </p></Link> 
          {/* <Link to="/">HOME</Link>
