@@ -4,7 +4,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import InnerNav from "../../Innernavbar/InnerNav";
 
-function MovieInfo({ data ,value}) {
+function MovieInfo({ data, value }) {
   let { id } = useParams();
   const url = `http://api.tvmaze.com/shows/${id}`;
   const cast_url = `http://api.tvmaze.com/shows/${id}/cast`;
@@ -18,15 +18,7 @@ function MovieInfo({ data ,value}) {
   const [episode, setEpisode] = useState();
   const [crew, setCrew] = useState();
   const [gallery, setGallery] = useState();
-  const [search, setSearch] = useState();
 
-// SINGLE__SHOW
-  useEffect(() => {
-    axios.get(search_url).then((res) => {
-      setSearch(res.data);
-    });
-  }, [search_url]);
-  
   // SHOW
   useEffect(() => {
     axios.get(url).then((res) => {
@@ -55,16 +47,23 @@ function MovieInfo({ data ,value}) {
     });
   }, [gallery_url]);
 
-    // CREW
-    useEffect(() => {
-      axios.get(crew_url).then((res) => {
-        setCrew(res.data);
-      });
-    }, [crew_url]);
+  // CREW
+  useEffect(() => {
+    axios.get(crew_url).then((res) => {
+      setCrew(res.data);
+    });
+  }, [crew_url]);
 
   return (
     <div className="movie_info_global">
-       <InnerNav gallery={gallery}  episode={episode} cast={cast} movieitem={movieitem} crew={crew} value={value}/>    
+      <InnerNav
+        gallery={gallery}
+        episode={episode}
+        cast={cast}
+        movieitem={movieitem}
+        crew={crew}
+        value={value}
+      />
     </div>
   );
 }

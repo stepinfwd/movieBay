@@ -19,7 +19,6 @@ function Gallery({ gallery }) {
                 }}
                 alt=""
                 key={searchItem.id}
-                // onClick={Modal}
               ></div>
             </>
           ))}

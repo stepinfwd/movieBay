@@ -18,8 +18,6 @@ function Navbar({ searchCallback }) {
           <Link to="/">
             <p className="navbar-brand">NETFLIX</p>
           </Link>
-          {/* <Link to="/">HOME</Link> */}
-        <Link to="/people">people</Link>
           <form className="form-inline">
             <input
               className="form-control mr-sm-2 input-box"

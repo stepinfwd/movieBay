@@ -7,5 +7,10 @@
     margin-top: 40px;
 }
 .pagination{
-    display: block !important;
+    /* display: block !important; */
+    justify-content: center !important;
+}
+.next .page-prev{
+    font-weight: 900 !important;
+    color: brown !important;
 }

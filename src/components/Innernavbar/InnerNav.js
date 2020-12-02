@@ -16,7 +16,6 @@ import {
 import CastInfo from "../castinfo/CastInfo";
 function InnerNav(props) {
   let { path, url } = useRouteMatch();
-  const { id } = useParams();
   const { gallery, crew, episode, movieitem, cast,value } = props;
   return (
     <>

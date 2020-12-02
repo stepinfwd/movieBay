@@ -3,7 +3,6 @@ import "./Episode.css";
 import Loader from "../common/Loader/Loader";
 
 function Episode({ episode }) {
-  console.log("episode is", episode);
   return (
     <>
       <p className="castInfo_global_header">
@@ -24,20 +23,20 @@ function Episode({ episode }) {
           <tbody>
             {episode
               ? episode.map((episode) => (
-                  <>
-                    {/* <h3 className="movie_table_name">{episode.name}</h3> */}
-<tr key={episode.id}>
-                      <td>{episode.name}</td>
-                      <td>{episode.season}</td>
-                      <td>{episode.runtime}</td>
-                      <td>{episode.airdate}</td>
-                      <td>love</td>
-                    </tr>
-                  </>
-                ))
-              : <Loader/>}
+                <>
+                  {/* <h3 className="movie_table_name">{episode.name}</h3> */}
+                  <tr key={episode.id}>
+                    <td>{episode.name}</td>
+                    <td>{episode.season}</td>
+                    <td>{episode.runtime}</td>
+                    <td>{episode.airdate}</td>
+                    <td>love</td>
+                  </tr>
+                </>
+              ))
+              : <Loader />}
           </tbody>
-        </table>{" "}
+        </table>
       </div>
     </>
   );

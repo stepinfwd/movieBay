@@ -2,14 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Card.css";
 import like from "../assets/icons8-heartv.svg";
+import Loader from "../common/Loader/Loader";
 function Card(props) {
   const { item } = props;
   return (
     <div className=" mt-4">
-      <div className="card">
+    { item? <div className="card">
         <div
           className="card-img-top"
-          style={{ backgroundImage: `url(${props.item.image.original})` }}
+          style={{ backgroundImage: `url(${item.image.original})` }}
         />
         <div className="card-block">
           <h4 className="card-title">{props.item.name}</h4>
@@ -47,7 +48,7 @@ function Card(props) {
             Rating - {item.rating.average}
           </span>
         </div>
-      </div>
+      </div>:<Loader/>}
     </div>
   );
 }
