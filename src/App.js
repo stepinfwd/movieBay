@@ -5,9 +5,12 @@ import MovieInfo from "./components/Views/Movie-info/MovieInfo";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Layout/Navbar/Navbar";
 import Person from "./components/person/Person";
+import ShowSearch from "./components/ShowSearch/ShowSearch";
 
 function App() {
   const [input, searchInput] = useState();
+  const [search, setSearch] = useState();
+
   // to get search value from navbar
   const searchCallback = (value) => {
     searchInput(value);
@@ -20,8 +23,11 @@ function App() {
           <Route exact path="/">
             <Home value={input} />
           </Route>
+          <Route exact path="/search">
+            <ShowSearch  value={input}/>
+          </Route>
           <Route exact path="/people">
-            <Person />
+            <Person/>
           </Route>
           <Route exact path="/shows/:id">
             <MovieInfo value={input} />

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../assets/logo.png";
 import "./Navbar.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Navbar({ searchCallback }) {
   const [input, setInput] = useState("");
   const searchHandler = (e) => {
@@ -9,8 +8,6 @@ function Navbar({ searchCallback }) {
     searchCallback(input);
   };
   const handleSearch = (e) => {
-    e.preventDefault();
-    console.log("search DataTransferItem", input);
     searchCallback(input);
     setInput("");
   };
@@ -19,11 +16,10 @@ function Navbar({ searchCallback }) {
       <div>
         <nav className="navbar  justify-content-between">
           <Link to="/">
-            {" "}
             <p className="navbar-brand">NETFLIX</p>
           </Link>
-          {/* <Link to="/">HOME</Link>
-         <Link to="/people">people</Link> */}
+          {/* <Link to="/">HOME</Link> */}
+        <Link to="/people">people</Link>
           <form className="form-inline">
             <input
               className="form-control mr-sm-2 input-box"
@@ -33,12 +29,14 @@ function Navbar({ searchCallback }) {
               onChange={searchHandler}
               value={input}
             />
-            <button
-              className="btn s my-2 my-sm-0 search-button"
-              onClick={handleSearch}
-            >
-              Search
-            </button>
+            <Link to="/search">
+              <button
+                className="btn s my-2 my-sm-0 search-button"
+                onClick={handleSearch}
+              >
+                Search
+              </button>
+            </Link>
           </form>
         </nav>
       </div>
