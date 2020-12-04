@@ -19,7 +19,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate,next,previous}) => {
           </li>
         ))}
         <li className="page-item">
-          <a className="page-link next" onClick={()=>next()}>next</a>
+          <a className="page-link next" onClick={()=>next(pageNumbers)}>next</a>
         </li>
       </ul>
     </div>

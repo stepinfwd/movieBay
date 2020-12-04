@@ -5,7 +5,7 @@
   text-align: left;
 }
 .schedule_header {
-  background-color: rgb(46, 46, 46);
+  background-color: #434448;
   color: #fff;
   padding: 10px;
   height: 40px;
@@ -14,7 +14,8 @@
 .schedule_card {
   /* color: rgb(255, 255, 255) !important; */
   width: 60vw !important;
-  background-color: #676b66;
+  /* background-color: #676b66; */
+ background-color: #fff;
   margin: 0 auto;
   font-weight: 800;
 
@@ -27,12 +28,16 @@
   margin: 30px auto;
   border-radius: 10px;
   width: 60vw !important;
-  /* box-shadow: 0px 0px 120px -25px rgba(216, 213, 236, 0.5) !important; */
+  box-shadow: 0px 0px 120px -25px rgba(216, 213, 236, 0.5) !important;
 
 
 }
+.schedInfo_global_header img{
+  width: 4rem;
+  margin-right: 20px;
+}
 .schedule-date {
-  color:  #2b36c7;
+  color:  #5661f1;
   font-size: 2rem;
   background-color: 212529;
 
@@ -42,11 +47,20 @@
   color: white;
   font-size: 1.2rem;
   font-weight: 800;
-  background-color: #212529;
+  background-color: #fff;
   margin-bottom: 0 !important;
   padding-bottom: 1rem;
-}
+  padding-top: 1rem;
 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.schedInfo_global_footer{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 30px;
+  background-color: #2b36c7;
+}
 @media only screen and (max-width: 768px) {
 
   .schedule_card {

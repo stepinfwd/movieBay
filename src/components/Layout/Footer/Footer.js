@@ -6,7 +6,7 @@ function Footer(props) {
     <div className="footer">
       <div className="footer-copyright text-center py-3">
         © 2020 Copyright :
-        <a href="/#"> Netflix and Chill</a>
+        <a href="/#"> Movies and Chill</a>
       </div>
     </div>
   );

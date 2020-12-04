@@ -1,6 +1,7 @@
 
 .page-link{
-    color: #242222 !important;
+    color: #2e1cb9 !important;
+    font-weight: 800;
 
 }
 .pagination-container{
@@ -13,4 +14,7 @@
 .next .page-prev{
     font-weight: 900 !important;
     color: brown !important;
+}
+.onpage{
+    background-color: crimson;
 }

@@ -22,13 +22,13 @@ function Navbar({ searchCallback }) {
       <div>
         <nav className="navbar  justify-content-between">
           <Link to="/">
-            <p className="navbar-brand">NETFLIX</p>
+            <p className="navbar-brand">Movies<span>N</span>ow</p>
           </Link>
           <form className="form-inline">
             <input
               className="form-control mr-sm-2 input-box"
               type="search"
-              placeholder="Search"
+              placeholder="Search Shows"
               aria-label="Search"
               onChange={searchHandler}
               value={input}
@@ -38,7 +38,7 @@ function Navbar({ searchCallback }) {
                 className="btn s my-2 my-sm-0 search-button"
                 onClick={handleSearch}
               >
-                Search
+                Search 
               </button>
             </Link>
           </form>

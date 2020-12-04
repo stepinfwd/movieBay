@@ -5,14 +5,14 @@ import Loader from "../common/Loader/Loader";
 import Pagination from "../common/Pagination/Pagination";
 function CardList({ data, value }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostPerPage] = useState(15);
+  const [postsPerPage, setPostPerPage] = useState(12);
   // PAGINATION
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPost = data.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  const previous = () => setCurrentPage(currentPage-1);
-  const next = () => setCurrentPage(currentPage+1);
+  const previous = () => setCurrentPage(currentPage-1  > 0 ? currentPage - 1 : 1);
+  const next = (pageNumbers) => setCurrentPage(currentPage+1  <= pageNumbers.length ? currentPage + 1 : 1);
 
 
   return (

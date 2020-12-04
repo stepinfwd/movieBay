@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ScheduleCard from "./ScheduleCard";
 import "./ScheduleCard.css";
+import calender from "../assets/calender.png"
 import axios from "axios";
 
 function Schedule(props) {
@@ -16,9 +17,12 @@ function Schedule(props) {
     return (
         <div className="schedule-container">
             <p className="schedInfo_global_header">
-            <span className="schedule-date">Dec 03</span>            </p>
+                <img src={calender}></img>
+            <span className="schedule-date">December 03</span>            </p>
      
             <ScheduleCard schedule={schedule} />
+            <p className="schedInfo_global_footer"> </p>
+
         </div>
     );
 }
