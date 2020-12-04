@@ -1,107 +1,102 @@
 .search_card {
-    width: 80vw;
-    height: 30vw;
-    background: transparent;
-    border-radius: 10px;
-    margin: 40px auto;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
-    text-align: left;
+  width: 90vw;
+  height: auto;
+  background: transparent;
+  border-radius: 10px;
+  margin: 40px auto;
+  box-shadow: 0px 20px 30px 3px #54013c46;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px !important;
+}
+.image-grid {
+  margin: 0 auto;
+}
+.search_card_left {
+  height: 80vw;
+  float: left;
+  overflow: hidden;
+  border-radius: 10px !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://images.unsplash.com/photo-1529940605533-4f4e7b28595a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fGN5YmVycHVuayUyMHBlb3BsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+.search_card_right {
+  float: left;
+  background: #000000;
+
+  border-radius: 0 10px 10px 0;
+}
+.search_card_right h1 {
+  color: white;
+  font-weight: 700;
+  text-align: left;
+  font-size: 32px;
+  margin: 10px 0 0 0;
+  padding: 0 0 0 10px;
+  letter-spacing: 1px;
+}
+.search_card_right__details ul {
+  list-style-type: none;
+  padding: 0 0 0 10px;
+  margin: 10px 0 0 0;
+}
+.search_card_right__details ul li {
+  display: inline;
+  color: #e3e3e3;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0 40px 0 0;
+}
+
+.search_card_right__review p {
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  line-height: 20px;
+  text-align: left;
+}
+.search_card_right__review a {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0 0 0 40px;
+  color: #212529;
+  margin: 0;
+}
+.search_card_right__button {
+  padding: 0 0 30px 10px;
+  margin: 30px 0 0 0;
+}
+.search_card_right__button a {
+  color: #ffffff !important;
+  text-decoration: none;
+  border: 2px solid #2b36c7 !important;
+  font-size: 12px;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  padding: 10px;
+  background-position: 7% 50%;
+  border-radius: 5px;
+}
+.search_card_right__button a:hover {
+  color: #ffffff;
+  background-color: #2b36c7;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: 10% 50%;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .search_card {
+    width: 60vw;
+    height: auto;
   }
   .search_card_left {
-    width: 40%;
-    height: 30vw;
-    float: left;
-    overflow: hidden;
-    /* background: transparent; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("https://images.unsplash.com/photo-1529940605533-4f4e7b28595a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fGN5YmVycHVuayUyMHBlb3BsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    height: 20vw;
+    background-position: center;
   }
-  /* .search_card_left img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 0 0 10px;
-    -webkit-border-radius: 10px 0 0 10px;
-    -moz-border-radius: 10px 0 0 10px;
-    position: relative;
-  } */
-  .search_card_right {
-    width: 60%;
-    float: left;
-    background: #000000;
-    height: 30vw;
-    border-radius: 0 10px 10px 0;
-    -webkit-border-radius: 0 10px 10px 0;
-    -moz-border-radius: 0 10px 10px 0;
-  }
-  .search_card_right h1 {
-    color: white;
-    font-weight: 400;
-    text-align: left;
-    font-size: 40px;
-    margin: 30px 0 0 0;
-    padding: 0 0 0 40px;
-    letter-spacing: 1px;
-  }
-  .search_card_right__details ul {
-    list-style-type: none;
-    padding: 0 0 0 40px;
-    margin: 10px 0 0 0;
-  }
-  .search_card_right__details ul li {
-    display: inline;
-    color: #e3e3e3;
-    font-weight: 400;
-    font-size: 14px;
-    padding: 0 40px 0 0;
-  }
-  
-  .search_card_right__review p {
-    color: white;
-    font-size: 12px;
-    padding: 0 40px 0 40px;
-    margin: 10px 0 10px 0;
-    line-height: 20px;
-    text-align: left;
-  }
-  .search_card_right__review a {
-    text-decoration: none;
-    font-size: 14px;
-    padding: 0 0 0 40px;
-    color: #212529;
-    margin: 0;
-  }
-  .search_card_right__button {
-    padding: 0 0 0 40px;
-    margin: 30px 0 0 0;
-  }
-  .search_card_right__button a {
-    color: #ffffff !important;
-    text-decoration: none;
-    border: 2px solid #2b36c7 !important;
-    font-size: 12px;
-    background-size: 12px 12px;
-    background-repeat: no-repeat;
-    padding: 10px;
-    background-position: 7% 50%;
-    border-radius: 5px;
-    -webkit-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-  }
-  .search_card_right__button a:hover {
-    color: #ffffff;
-    background-color: #2b36c7;
-    background-size: 12px 12px;
-    background-repeat: no-repeat;
-    background-position: 10% 50%;
-    cursor: pointer;
-    -webkit-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-  }
-  
+}

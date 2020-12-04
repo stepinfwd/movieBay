@@ -10,12 +10,11 @@ import {
   Switch,
   Route,
   Link,
-  useParams,
   useRouteMatch,
 } from "react-router-dom";
 import CastInfo from "../castinfo/CastInfo";
 function InnerNav(props) {
-  let { path, url } = useRouteMatch();
+  let {url } = useRouteMatch();
   const { gallery, crew, episode, movieitem, cast,value } = props;
   return (
     <>

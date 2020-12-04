@@ -1,0 +1,12 @@
+.error-page-global{
+    min-height: 86vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.error-number{
+    font-weight: 800;
+    color: crimson;
+    font-size: 3rem;
+}

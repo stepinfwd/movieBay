@@ -1,22 +1,31 @@
 import React from "react";
-import "./ScheduleCard.css"
-function ScheduleCard(props) {
+import "./ScheduleCard.css";
+import Loader from "../common/Loader/Loader";
+function ScheduleCard({ schedule }) {
   return (
-      <div className="schedule_card">
-        <p className="schedule_header">21:00</p>
-        <div className="container">
-          <div className="flexing">
-            <div className="schedule_time_container">
-              <p className="schedule_time">20:00</p>
-              <p className="schedule_channel">NBC</p>
-            </div>
-            <div className="schedule_name_container">
-              <p className="schedule_name">The Bachelorette</p>
-              <p className="schedule_week">Week 8</p>
+    <>
+      {schedule ? (
+        schedule.slice(0, 3).map((s) => (
+          <div className="schedule_card" key={s.id}>
+            <p className="schedule_header">{s.airtime}pm</p>
+            <div className="container">
+              <div className="flexing">
+                <div className="schedule_time_container">
+                  <p className="schedule_time">{s.airtime}</p>
+                  <p className="schedule_channel">{s.type}</p>
+                </div>
+                <div className="schedule_name_container">
+                  <p className="schedule_name">{s.name}</p>
+                  <p className="schedule_week">{s.show.language}</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        ))
+      ) : (
+        <Loader />
+      )}
+    </>
   );
 }
 

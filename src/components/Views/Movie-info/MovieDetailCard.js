@@ -13,6 +13,7 @@ function MovieDetailCard({ movieitem }) {
                 <img
                   className="movie_header_image"
                   style={{ backgroundImage: `url(${movieitem.image.medium})` }}
+                  alt=""
                 />
                 <h1>{movieitem.name}</h1>
                 <span className="minutes">{movieitem.runtime} min</span>

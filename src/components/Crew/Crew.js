@@ -17,10 +17,13 @@ function Crew({ crew }) {
                   <div className="cast-card__header-image">
                     {person.image && <img
                       className="cast-card__avatar"
+                      alt=""
                       style={{
-                        backgroundImage: `url(${person.image.medium}, url(${fall_src})`,
+                        backgroundImage: `url(${person.image.medium ||fall_src}) `,
                       }}
+
                     />}
+                    {/* {{backgroundImage: `url(${person.image.medium || 'falback-image.jpg'}}} */}
                   </div>
                   <p className="cast-card__name">{person.name}</p>
                   <p className="cast-card__name_linker">AS</p>

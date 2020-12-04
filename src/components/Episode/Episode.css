@@ -57,3 +57,12 @@ thead {
 }
 
 }
+
+.table td, .table th {
+  padding: .5rem !important;
+  vertical-align: top !important;
+  border-top: 1px solid #080808 !important;
+}
+.episode-global-container{
+  padding: 20px;
+}

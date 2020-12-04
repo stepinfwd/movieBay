@@ -11,7 +11,6 @@ function MovieInfo({ data, value }) {
   const episode_url = `http://api.tvmaze.com/shows/${id}/episodes`;
   const crew_url = `http://api.tvmaze.com/shows/${id}/crew`;
   const gallery_url = `http://api.tvmaze.com/shows/${id}/images`;
-  const search_url = `http://api.tvmaze.com/shows/`;
 
   const [movieitem, setMovieitem] = useState();
   const [cast, setCast] = useState();

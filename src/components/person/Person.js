@@ -15,6 +15,7 @@ function Person({ person }) {
             <div className="person_card">
               <img
                 className="cast-card__avatar"
+                alt=""
                 style={{
                   backgroundImage: `url(${p.image.medium})`,
                 }}

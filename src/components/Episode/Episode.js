@@ -4,7 +4,7 @@ import Loader from "../common/Loader/Loader";
 
 function Episode({ episode }) {
   return (
-    <>
+    <div className="episode-global-container">
       <p className="castInfo_global_header">
         Episode<span className="castInfo_global_header_span">Info</span>
       </p>
@@ -16,7 +16,7 @@ function Episode({ episode }) {
               <th>Season</th>
               <th>Time</th>
               <th>Date</th>
-              <th id="table_top_right">Rating</th>
+              {/* <th id="table_top_right">Rating</th> */}
             </tr>
           </thead>
 
@@ -30,7 +30,7 @@ function Episode({ episode }) {
                     <td>{episode.season}</td>
                     <td>{episode.runtime}</td>
                     <td>{episode.airdate}</td>
-                    <td>love</td>
+                    {/* <td>love</td> */}
                   </tr>
                 </>
               ))
@@ -38,7 +38,7 @@ function Episode({ episode }) {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
 

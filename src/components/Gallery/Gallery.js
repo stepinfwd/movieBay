@@ -18,7 +18,6 @@ function Gallery({ gallery }) {
                   backgroundImage: `url(${searchItem.resolutions.original.url})`,
                 }}
                 alt=""
-                key={searchItem.id}
               ></div>
             </>
           ))}

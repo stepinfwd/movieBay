@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import _ from "lodash";
+
 function Navbar({ searchCallback }) {
   const [input, setInput] = useState("");
+  // DEBOUNCING FOR REDUCING CALLS
+  const delayedQuery = useCallback(_.debounce(q => searchCallback(q), 500), []);
+
   const searchHandler = (e) => {
     setInput(e.target.value);
-    searchCallback(input);
+    delayedQuery(input);
+    // searchCallback(input);
   };
   const handleSearch = (e) => {
     searchCallback(input);

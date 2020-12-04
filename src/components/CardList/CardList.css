@@ -11,4 +11,6 @@
   }
   .image-grid .row{
     justify-content: center !important;
+    align-items: center;
+    min-height: 86vh;
   }
