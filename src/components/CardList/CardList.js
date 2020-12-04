@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import Card from "../Card/Card";
 import "./CardList.css";
 import Loader from "../common/Loader/Loader";
@@ -11,8 +11,10 @@ function CardList({ data, value }) {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPost = data.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  const previous = () => setCurrentPage(currentPage-1  > 0 ? currentPage - 1 : 1);
-  const next = (pageNumbers) => setCurrentPage(currentPage+1  <= pageNumbers.length ? currentPage + 1 : 1);
+  const previous = () =>
+    setCurrentPage(currentPage - 1 > 0 ? currentPage - 1 : 1);
+  const next = (pageNumbers) =>
+    setCurrentPage(currentPage + 1 <= pageNumbers.length ? currentPage + 1 : 1);
 
 
   return (
@@ -25,8 +27,8 @@ function CardList({ data, value }) {
             </div>
           ))
         ) : (
-            <Loader />
-          )}
+          <Loader />
+        )}
       </div>
       <Pagination
         postsPerPage={postsPerPage}
@@ -34,6 +36,7 @@ function CardList({ data, value }) {
         paginate={paginate}
         previous={previous}
         next={next}
+        currentPage={currentPage}
       />
     </div>
   );

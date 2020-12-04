@@ -16,5 +16,6 @@
     color: brown !important;
 }
 .onpage{
-    background-color: crimson;
+    background-color: crimson !important;
+    color: rgb(236, 236, 236) !important;
 }
