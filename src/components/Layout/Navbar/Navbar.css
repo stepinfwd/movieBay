@@ -23,6 +23,10 @@ nav {
   margin-right: 10px;
   margin-top: -10px;
 }
+.navbar-header-span{
+  font-size: 1.5rem !important;
+  color: #2b36c7;
+}
 .navbar-brand span {
   font-weight: 900 !important;
   font-size: 2rem;

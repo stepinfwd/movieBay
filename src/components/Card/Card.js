@@ -20,15 +20,15 @@ function Card(props) {
           </div>
           <div className="card-text">
             <button type="button" className="btn btn-outline-secondary">
-              {item.genres[0]}
+            {item.genres[0]?item.genres[0]:<span>No Data</span>}
             </button>
             <button type="button" className="btn  btn-outline-secondary">
-              {item.genres[1]}
+              {item.genres[1]?item.genres[1]:<span>No Data</span>}
             </button>
           </div>
 
           <button type="button" className="btn btn-outline-secondary">
-            {item.genres[2]}
+          {item.genres[2]?item.genres[2]:<span>No Data</span>}
           </button>
         </div>
         <Link to={`/shows/${item.id}`}>

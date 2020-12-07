@@ -24,6 +24,7 @@ function App() {
           <Route exact path="/">
             <Home value={input} />
           </Route>
+
           <Route exact path="/search">
             <ShowSearch  value={input}/>
           </Route>

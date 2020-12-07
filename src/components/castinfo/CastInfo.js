@@ -3,7 +3,7 @@ import "./CastInfo.css";
 import Loader from "../common/Loader/Loader";
 
 function CastInfo({ cast, value }) {
-  const fall_src = "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fHBlcnNvbnxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60;"
+  const fall_src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
 
   return (
     <div className="castInfo_global container">
@@ -20,7 +20,7 @@ function CastInfo({ cast, value }) {
                   <div
                     className="cast-card__avatar"
                     style={{
-                      backgroundImage: `url(${person.image.original ||fall_src}) `
+                      backgroundImage: `url(${person.image.original ||fall_src}),url(${fall_src}) `
                     }}
                   />}
                 </div>

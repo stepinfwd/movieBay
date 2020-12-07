@@ -2,7 +2,7 @@ tr:nth-child(n) {
   /* background: #282C34; */
   /* background: #fdeae9; */
   /* background: #FFEEDD; */
-  background-color: #7d7d7d;
+  background-color: #353131;
 }
 /* tr:nth-child(even) {
     background: #212429;
@@ -10,7 +10,8 @@ tr:nth-child(n) {
 td,
 th {
   /* color: #424242; */
-  color: #000000;
+  color: #fff;
+  font-weight: 800;
 }
 .episode_table {
   margin: 30px auto;

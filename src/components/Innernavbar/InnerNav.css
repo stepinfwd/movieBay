@@ -9,8 +9,8 @@
 .inner_nav {
   padding-top: 20px;
 }
-span {
-  color: #c50000;
+.breadcrumb span {
+  color: #2b36c7;
   font-weight: 900;
   display: inline-block;
 }

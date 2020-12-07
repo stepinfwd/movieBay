@@ -22,7 +22,7 @@ function Navbar({ searchCallback }) {
       <div>
         <nav className="navbar  justify-content-between">
           <Link to="/">
-            <p className="navbar-brand">Movies<span>N</span>ow</p>
+            <p className="navbar-brand">Movies<span className="navbar-header-span">Bay</span></p>
           </Link>
           <form className="form-inline">
             <input

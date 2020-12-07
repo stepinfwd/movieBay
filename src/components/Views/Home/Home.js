@@ -4,11 +4,14 @@ import CardList from "../../CardList/CardList";
 import axios from "axios";
 import Loader from "../../common/Loader/Loader";
 import Schedule from "../../Schedule/Schedule";
+import { useParams } from "react-router-dom";
 
 
 function Home({ value }) {
   const url = "http://api.tvmaze.com/shows";
   const time = "http://api.tvmaze.com/schedule?country=US&date=2014-12-01";
+  let { page } = useParams();
+
 
   const [data, setData] = useState("");
   const [showbytime, setShowbytime] = useState("");
