@@ -13,7 +13,7 @@ function MovieDetailCard({ movieitem }) {
             <div className="info_section">
               <div className="movie_header">
               {movieitem.image && 
-                <img
+                <div
                   className="movie_header_image"
                   style={{ backgroundImage: `url(${movieitem.image.original ||fall_src}) `, }}
                   alt=""

@@ -1,7 +1,9 @@
 .inner_nav ul li a {
   color: #fff !important;
   padding: 1rem;
-  font-weight: 600;
+  font-weight: 600; 
+  background-color: #1b1d1d;
+  border: 1px solid #070707;
 }
 .breadcrumb {
   background-color: #ffffff00 !important;
@@ -13,4 +15,10 @@
   color: #2b36c7;
   font-weight: 900;
   display: inline-block;
+}
+.active{
+  background-color: #2137d2bd !important;
+}
+.non-active{
+  background-color:  #1b1d1d!important;
 }

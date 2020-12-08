@@ -24,14 +24,14 @@ function ShowSearch({ value }) {
             data.map((item) => (
               <div className="search_card">
                 {item.show.image && item.show.image.original?
-                  <img
+                  <div
                     className="search_card_left"
-                    // style={{
-                    //   backgroundImage: `url(${item.show.image.original}?${item.show.image.original}:${fall_src}) `,
-                    //   // backgroundImage:`url(${fall_src})`
-                    // }}
-                    src={ item.show.image.original?item.show.image.original:fall_src}
-                  ></img>
+                    style={{
+                      backgroundImage: `url(${item.show.image.original}?${item.show.image.original}:${fall_src}) `,
+                      // backgroundImage:`url(${fall_src})`
+                    }}
+                    // src={ item.show.image.original?item.show.image.original:fall_src}
+                  ></div>
                :"" }
                 <div className="search_card_right">
                   <h1>{item.show.name}</h1>
