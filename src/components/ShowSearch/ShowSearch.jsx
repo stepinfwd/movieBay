@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 function ShowSearch({ value }) {
   const [data, setData] = useState();
   const url = "http://api.tvmaze.com/search/shows";
-  const fall_src = "https://images.unsplash.com/Ys-DBJeX0nE.JPG?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+  const fall_src =
+    "https://images.unsplash.com/Ys-DBJeX0nE.JPG?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80";
 
   // SINGLE__SHOW
   useEffect(() => {
@@ -23,16 +24,17 @@ function ShowSearch({ value }) {
           {data ? (
             data.map((item) => (
               <div className="search_card">
-                {item.show.image && item.show.image.original?
+                {item.show.image && item.show.image.original ? (
                   <div
                     className="search_card_left"
                     style={{
                       backgroundImage: `url(${item.show.image.original}?${item.show.image.original}:${fall_src}) `,
-                      // backgroundImage:`url(${fall_src})`
                     }}
                     // src={ item.show.image.original?item.show.image.original:fall_src}
                   ></div>
-               :"" }
+                ) : (
+                  ""
+                )}
                 <div className="search_card_right">
                   <h1>{item.show.name}</h1>
                   <div className="search_card_right__details">
