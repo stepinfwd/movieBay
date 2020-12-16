@@ -10,12 +10,18 @@ function CardList({ data, value }) {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPost = data.slice(indexOfFirstPost, indexOfLastPost);
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  const previous = () =>
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scroll(0, 0);
+  };
+  const previous = () => {
     setCurrentPage(currentPage - 1 > 0 ? currentPage - 1 : 1);
-  const next = (pageNumbers) =>
+    window.scroll(0, 0);
+  };
+  const next = (pageNumbers) => {
     setCurrentPage(currentPage + 1 <= pageNumbers.length ? currentPage + 1 : 1);
-
+    window.scroll(0, 0);
+  };
 
   return (
     <div className="container image-grid">

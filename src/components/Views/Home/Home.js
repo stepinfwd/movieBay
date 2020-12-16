@@ -5,16 +5,36 @@ import axios from "axios";
 import Loader from "../../common/Loader/Loader";
 import Schedule from "../../Schedule/Schedule";
 import { useParams } from "react-router-dom";
+import { connect } from "react-redux";
+import {fetchShow }from "../../Redux/Actions/ShowAction";
 
 
-function Home({ value }) {
+  // MapStateToProps=
+  const mapStateToProps = (state) => {
+    return {
+      shows: state.show.shows,
+    };
+  };
+
+  // MapDispatchToProps
+  const mapDispatchToProps = (dispatch) => {
+    return {
+      fetchShow: () => dispatch(fetchShow()),
+    };
+  };
+
+
+function Home({ value, fetchShow, shows }) {
   const url = "http://api.tvmaze.com/shows";
   const time = "http://api.tvmaze.com/schedule?country=US&date=2014-12-01";
   let { page } = useParams();
 
-
   const [data, setData] = useState("");
   const [showbytime, setShowbytime] = useState("");
+
+  useEffect(() => {
+    fetchShow();
+  }, []);
 
   // SHOW
   useEffect(() => {
@@ -33,14 +53,14 @@ function Home({ value }) {
       <h4 className="home_sec_heading">Featured</h4>
       {data ? (
         <div>
-          <CardList data={data} value={value} />
+          <CardList data={shows} value={value} />
           <Schedule />
         </div>
       ) : (
-          <Loader />
-        )}
+        <Loader />
+      )}
     </div>
   );
 }
 
-export default Home;
+export default connect( mapStateToProps,mapDispatchToProps)(Home);
