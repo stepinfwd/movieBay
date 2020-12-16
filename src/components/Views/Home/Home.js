@@ -36,10 +36,10 @@ function Home({ value, fetchShow, shows }) {
     fetchShow();
   }, []);
 
-  // SHOW
-  useEffect(() => {
-    axios.get(url).then((res) => setData(res.data));
-  }, []);
+  // // SHOW
+  // useEffect(() => {
+  //   axios.get(url).then((res) => setData(res.data));
+  // }, []);
 
   // SHOW BY TIME
   useEffect(() => {
@@ -51,7 +51,7 @@ function Home({ value, fetchShow, shows }) {
         <span className="home_main_heading">NOW</span> SHOWING
       </h3>
       <h4 className="home_sec_heading">Featured</h4>
-      {data ? (
+      {shows ? (
         <div>
           <CardList data={shows} value={value} />
           <Schedule />
