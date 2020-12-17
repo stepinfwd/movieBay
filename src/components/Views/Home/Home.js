@@ -33,7 +33,7 @@ function Home({ value, fetchShow, shows }) {
   const [showbytime, setShowbytime] = useState("");
 
   useEffect(() => {
-    fetchShow();
+    fetchShow()
   }, []);
 
   // // SHOW

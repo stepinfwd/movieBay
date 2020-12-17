@@ -10,9 +10,9 @@ export default function ShowRedcuer(state = initialState, action) {
     case "fetch_shows_request":
       return { ...state, loading: true };
     case "fetch_shows_success":
-      return { ...state, shows: action.payload };
+      return { ...state, shows: action.payload, loading: false };
     case "fetch_shows_failure":
-      return { ...state, error: action.payload };
+      return { ...state, error: action.payload, loading: false };
     default:
       return state;
   }
