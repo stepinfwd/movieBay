@@ -1,14 +1,14 @@
 import { combineReducers } from "redux";
-import showReducer from "./ShowReducer"
+import showReducer from "./ShowReducer";
 import castRedcuer from "./CastReducer";
-import crewReducer from "./CrewReducer"
+import crewReducer from "./CrewReducer";
 import galleryRedcuer from "./GalleryReducer";
-const rootReducer= combineReducers({ 
-    show:showReducer,
-    cast:castRedcuer,
-    crew:crewReducer,
-    gallery:galleryRedcuer,
-
-
+import { showDetailReducer } from "./showDetailReducer";
+const rootReducer = combineReducers({
+  show: showReducer,
+  cast: castRedcuer,
+  crew: crewReducer,
+  gallery: galleryRedcuer,
+  showdetail: showDetailReducer,
 });
 export default rootReducer;

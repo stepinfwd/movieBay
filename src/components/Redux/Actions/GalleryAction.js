@@ -26,6 +26,6 @@ export const FetchGallery = () => {
   return (dispatch) => {
     dispatch(fetchgalleryRequest);
     const url = "http://api.tvmaze.com/shows/1/images";
-    axios.get(url).then((crew) => dispatch(fetchgallerySuccess(crew.data)));
+    axios.get(url).then((gallery) => dispatch(fetchgallerySuccess(gallery.data)));
   };
 };

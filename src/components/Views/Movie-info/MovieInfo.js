@@ -7,13 +7,15 @@ import { FetchCast } from "../../Redux/Actions/CastAction";
 import { connect } from "react-redux";
 import { FetchCrew } from "../../Redux/Actions/CrewAction";
 import { FetchGallery } from "../../Redux/Actions/GalleryAction";
+import { ShowDetailAction } from "../../Redux/Actions/showDetailAction";
 
   // MapStateToProps=
   const mapStateToProps = (state) => {
     return {
       casts: state.cast.casts,
       crews: state.crew.crews,
-      gallerys: state.gallery.galleryImg,
+      gallerys:state.gallery.galleryImg,
+      details: state.showdetail.showDetail,
 
     };
   };
@@ -24,11 +26,13 @@ import { FetchGallery } from "../../Redux/Actions/GalleryAction";
       fetchCast: () => dispatch(FetchCast()),
       fetchCrew: () => dispatch(FetchCrew()),
       fetchGallery: () => dispatch(FetchGallery()),
+      fetchDetails: () => dispatch(ShowDetailAction()),
+
 
 
     };
   };
-function MovieInfo({ data, value, casts, fetchCast,crews,fetchCrew,fetchGallery,gallerys }) {
+function MovieInfo({ data, value, casts, fetchCast,crews,fetchCrew,fetchGallery,gallerys,details,fetchDetails }) {
   let { id } = useParams();
   const url = `http://api.tvmaze.com/shows/${id}`;
   // const cast_url = `http://api.tvmaze.com/shows/${id}/cast`;
@@ -54,6 +58,8 @@ function MovieInfo({ data, value, casts, fetchCast,crews,fetchCrew,fetchGallery,
     fetchCast();
     fetchCrew();
     fetchGallery();
+    fetchGallery();
+    fetchDetails();
 
   }, []);
 
@@ -85,7 +91,7 @@ function MovieInfo({ data, value, casts, fetchCast,crews,fetchCrew,fetchGallery,
         gallery={gallerys}
         episode={episode}
         cast={casts}
-        movieitem={movieitem}
+        movieitem={details}
         crew={crews}
         value={value}
       />
