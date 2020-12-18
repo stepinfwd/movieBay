@@ -16,7 +16,7 @@ import CastInfo from "../castinfo/CastInfo";
 
 function InnerNav(props) {
   let { url } = useRouteMatch();
-  const { gallery, crew, episode, movieitem, cast, value } = props;
+  const { gallery, crew, episode, movieitem, cast } = props;
   // const [active,setActive]=useState(false)
   const [state, menuToggle] = useState({
     detailOn: true,
@@ -123,7 +123,7 @@ function InnerNav(props) {
             <Route
               exact
               path={`${url}/cast`}
-              render={() => <CastInfo cast={cast} value={value} />}
+              render={() => <CastInfo cast={cast}  />}
             />
           </Switch>
         </div>

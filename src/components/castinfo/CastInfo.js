@@ -2,7 +2,7 @@ import React from "react";
 import "./CastInfo.css";
 import Loader from "../common/Loader/Loader";
 
-function CastInfo({ cast, value }) {
+function CastInfo({ cast}) {
   const fall_src =
     "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png";
 

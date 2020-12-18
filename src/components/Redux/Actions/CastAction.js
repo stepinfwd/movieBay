@@ -12,7 +12,7 @@ const fetchcastsSuccess = (data) => {
     type: "fetch_casts_success",
     payload: data,
   };
-};
+}; 
 const fetchcastsFailure = (error) => {
   return {
     type: "fetch_casts_failure",
@@ -21,11 +21,11 @@ const fetchcastsFailure = (error) => {
 };
 
 // ACTION CREATOR
-export const FetchCast = () => {
-//   let { id } = useParams();
+export const FetchCast = (id) => {
+  //   let { id } = useParams();
   return (dispatch) => {
     dispatch(fetchcastsRequest);
-    const url = "http://api.tvmaze.com/shows/3/cast";
+    const url = `http://api.tvmaze.com/shows/${id}/cast`;
     axios.get(url).then((cast) => dispatch(fetchcastsSuccess(cast.data)));
   };
 };

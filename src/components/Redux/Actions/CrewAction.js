@@ -21,11 +21,12 @@ const fetchcrewsFailure = (error) => {
 };
 
 // ACTION CREATOR
-export const FetchCrew = () => {
-//   let { id } = useParams();
+export const FetchCrew = (id) => {
+  // console.log("id at crew",id)
+  // let { id } = useParams();
   return (dispatch) => {
     dispatch(fetchcrewsRequest);
-    const url = "http://api.tvmaze.com/shows/3/crew";
+    const url = ` http://api.tvmaze.com/shows/${id}/crew`;
     axios.get(url).then((crew) => dispatch(fetchcrewsSuccess(crew.data)));
   };
 };

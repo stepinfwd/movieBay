@@ -53,7 +53,7 @@ function Home({ value, fetchShow, shows }) {
       <h4 className="home_sec_heading">Featured</h4>
       {shows ? (
         <div>
-          <CardList data={shows} value={value} />
+          <CardList data={shows} />
           <Schedule />
         </div>
       ) : (

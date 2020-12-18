@@ -9,32 +9,39 @@ import { FetchCrew } from "../../Redux/Actions/CrewAction";
 import { FetchGallery } from "../../Redux/Actions/GalleryAction";
 import { ShowDetailAction } from "../../Redux/Actions/showDetailAction";
 
-  // MapStateToProps=
-  const mapStateToProps = (state) => {
-    return {
-      casts: state.cast.casts,
-      crews: state.crew.crews,
-      gallerys:state.gallery.galleryImg,
-      details: state.showdetail.showDetail,
-
-    };
+// MapStateToProps=
+const mapStateToProps = (state) => {
+  return {
+    casts: state.cast.casts,
+    crews: state.crew.crews,
+    gallerys: state.gallery.galleryImg,
+    details: state.showdetail.showDetail,
   };
+};
 
-  // MapDispatchToProps
-  const mapDispatchToProps = (dispatch) => {
-    return {
-      fetchCast: () => dispatch(FetchCast()),
-      fetchCrew: () => dispatch(FetchCrew()),
-      fetchGallery: () => dispatch(FetchGallery()),
-      fetchDetails: () => dispatch(ShowDetailAction()),
-
-
-
-    };
+// MapDispatchToProps
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchCast: (id) => dispatch(FetchCast(id)),
+    fetchCrew: (id) => dispatch(FetchCrew(id)),
+    fetchGallery: (id) => dispatch(FetchGallery(id)),
+    fetchDetails: (id) => dispatch(ShowDetailAction(id)),
   };
-function MovieInfo({ data, value, casts, fetchCast,crews,fetchCrew,fetchGallery,gallerys,details,fetchDetails }) {
+};
+function MovieInfo({
+  data,
+  casts,
+  fetchCast,
+  crews,
+  fetchCrew,
+  fetchGallery,
+  gallerys,
+  details,
+  fetchDetails,
+}) {
   let { id } = useParams();
-  const url = `http://api.tvmaze.com/shows/${id}`;
+  // console.log("ID is",id)
+  // const url = `http://api.tvmaze.com/shows/${id}`;
   // const cast_url = `http://api.tvmaze.com/shows/${id}/cast`;
   const episode_url = `http://api.tvmaze.com/shows/${id}/episodes`;
   // const crew_url = `http://api.tvmaze.com/shows/${id}/crew`;
@@ -46,23 +53,21 @@ function MovieInfo({ data, value, casts, fetchCast,crews,fetchCrew,fetchGallery,
   const [crew, setCrew] = useState();
   const [gallery, setGallery] = useState();
 
-  // SHOW
-  useEffect(() => {
-    axios.get(url).then((res) => {
-      setMovieitem(res.data);
-    });
-  }, [url]);
+  // // SHOW
+  // useEffect(() => {
+  //   axios.get(url).then((res) => {
+  //     setMovieitem(res.data);
+  //   });
+  // }, [url]);
 
   // CAST
   useEffect(() => {
-    fetchCast();
-    fetchCrew();
-    fetchGallery();
-    fetchGallery();
-    fetchDetails();
-
+    // console.log("ID IN UE",id)
+    fetchCast(id);
+    fetchGallery(id);
+    fetchCrew(id);
+    fetchDetails(id);
   }, []);
-
 
   // EPISODE
   useEffect(() => {
@@ -93,9 +98,8 @@ function MovieInfo({ data, value, casts, fetchCast,crews,fetchCrew,fetchGallery,
         cast={casts}
         movieitem={details}
         crew={crews}
-        value={value}
       />
     </div>
   );
 }
-export default connect( mapStateToProps,mapDispatchToProps)(MovieInfo);
+export default connect(mapStateToProps, mapDispatchToProps)(MovieInfo);

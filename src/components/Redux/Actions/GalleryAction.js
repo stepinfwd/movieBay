@@ -21,11 +21,13 @@ const fetchgalleryFailure = (error) => {
 };
 
 // ACTION CREATOR
-export const FetchGallery = () => {
-//   let { id } = useParams();
+export const FetchGallery = (id) => {
+  //   let { id } = useParams();
   return (dispatch) => {
     dispatch(fetchgalleryRequest);
-    const url = "http://api.tvmaze.com/shows/1/images";
-    axios.get(url).then((gallery) => dispatch(fetchgallerySuccess(gallery.data)));
+    const url = `http://api.tvmaze.com/shows/${id}/images`;
+    axios
+      .get(url)
+      .then((gallery) => dispatch(fetchgallerySuccess(gallery.data)));
   };
 };

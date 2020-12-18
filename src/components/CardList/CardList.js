@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 import "./CardList.css";
 import Loader from "../common/Loader/Loader";
 import Pagination from "../common/Pagination/Pagination";
-function CardList({ data, value }) {
+function CardList({ data }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostPerPage] = useState(12);
   // PAGINATION
