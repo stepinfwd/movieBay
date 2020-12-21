@@ -4,8 +4,8 @@ import "./Gallery.css";
 function Gallery({ gallery }) {
   return (
     <>
-      <p className="castInfo_global_header">
-        Gallery<span className="castInfo_global_header_span">Info</span>
+      <p className="castInfo-global-header">
+        Gallery<span className="castInfo-global-header-span">Info</span>
       </p>
       <div className="image-block-container" style={{ marginTop: "30px" }}>
         {gallery &&

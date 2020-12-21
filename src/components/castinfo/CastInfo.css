@@ -1,16 +1,15 @@
 
-.castInfo_global{
+.castInfo-global{
     width: 90vw;
-    /* margin: 80px auto; */
     margin: 0 auto;
 }
-.castInfo_global_header {
+.castInfo-global-header {
 
     color: #fff !important;
     font-size: 3rem;
     padding-bottom: 20px;
 }
-.castInfo_global_header_span{
+.castInfo-global-header-span{
     color: #2b36c7;
 }
 .cast-card {
@@ -26,15 +25,15 @@
      margin: 40px auto;
 
 }
-.cast-card__moviename{
+.cast-card-moviename{
     font-weight: 700;
     color: #212529;
 }
-.cast-card__name_linker{
+.cast-card-name-linker{
     font-weight: 700 !important;
     margin-bottom: 0.8rem !important;
 }
-.cast-card__header-image {
+.cast-card-header-image {
     width: 100%;
     height: 6em;
     padding-top: 2em;
@@ -42,7 +41,7 @@
     background-size: cover;
     background-color: #fafafa;
 }
-.cast-card__avatar {
+.cast-card-avatar {
     width: 6em;
     height: 6em;
     margin: auto;
@@ -51,7 +50,7 @@
     background-color: #eee;
     border-radius: 100%;
 }
-.cast-card__name {
+.cast-card-name {
     margin-top: 30px;
     margin-bottom: 0.5em;
     font-size: 1.3rem;

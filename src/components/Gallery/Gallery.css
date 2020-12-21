@@ -4,7 +4,7 @@
   border-radius: 1rem;
 }
 
-.image-block-container{
+.image-block-container {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
@@ -47,7 +47,7 @@
     min-height: 80vw;
     border-radius: 0.5rem;
   }
-  .image-block-container{
+  .image-block-container {
     grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
     grid-gap: 30px;
 

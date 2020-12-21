@@ -28,7 +28,7 @@ export const FetchSearch = (value) => {
     const url = "http://api.tvmaze.com/search/shows";
     axios
       .get(url, { params: { q: value } })
-      .then((search) => dispatch(fetchsearchSuccess(search.data)));
+      .then((search) =>{ dispatch(fetchsearchSuccess(search.data))});
       // dispatch(fetchsearchClear);
 
   };
