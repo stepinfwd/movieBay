@@ -16,7 +16,6 @@ function Navbar({ searchCallback }) {
   const handleSearch = (e) => {
     searchCallback(input);
     setInput("");
-    console.log("CALUE na",input)
 
   };
 

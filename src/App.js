@@ -23,15 +23,14 @@ function App() {
   const searchCallback = (value) => {
     searchInput(value);
   };
-  console.log("CALUE a[pp", input);
   return (
     <Provider store={store}>
-      {console.log("STORE", store)}
       <div className="App">
         <Router>
           <Navbar searchCallback={searchCallback} />
           <Switch>
             <Route exact path="/">
+              
               <Home />
             </Route>
 
