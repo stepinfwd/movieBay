@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.39bd7fa8.chunk.css",
+    "main.js": "/static/js/main.4de73078.chunk.js",
+    "main.js.map": "/static/js/main.4de73078.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ccffed6a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ccffed6a.js.map",
+    "static/css/2.1a02f21c.chunk.css": "/static/css/2.1a02f21c.chunk.css",
+    "static/js/2.4100a96c.chunk.js": "/static/js/2.4100a96c.chunk.js",
+    "static/js/2.4100a96c.chunk.js.map": "/static/js/2.4100a96c.chunk.js.map",
+    "static/js/3.a38a3934.chunk.js": "/static/js/3.a38a3934.chunk.js",
+    "static/js/3.a38a3934.chunk.js.map": "/static/js/3.a38a3934.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.1a02f21c.chunk.css.map": "/static/css/2.1a02f21c.chunk.css.map",
+    "static/css/main.39bd7fa8.chunk.css.map": "/static/css/main.39bd7fa8.chunk.css.map",
+    "static/js/2.4100a96c.chunk.js.LICENSE.txt": "/static/js/2.4100a96c.chunk.js.LICENSE.txt",
+    "static/media/icons8-heartv.d4a2593f.svg": "/static/media/icons8-heartv.d4a2593f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ccffed6a.js",
+    "static/css/2.1a02f21c.chunk.css",
+    "static/js/2.4100a96c.chunk.js",
+    "static/css/main.39bd7fa8.chunk.css",
+    "static/js/main.4de73078.chunk.js"
+  ]
+}
